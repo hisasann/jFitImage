@@ -1,0 +1,74 @@
+<!DOCTYPE HTML>
+<html lang="ru-RU">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+	<style type="text/css" media="screen">
+		* {
+			padding: 0px;
+			margin: 0px;
+		}
+		
+		/* clearfix */
+		.clearfix:after {
+		content: ".";
+		display: block;
+		height: 0;
+		clear: both;
+		visibility: hidden;
+		}
+
+		.clearfix {
+		display: inline-block;
+		}
+
+		/* Hides from IE-mac \*/
+		* html .clearfix {height: 1%;}
+		.clearfix {display: block;}
+		/* End hide from IE-mac */
+	
+		p {
+			width: 350px;
+			height: 250px;
+			border: 1px solid;
+			float: left;
+		}
+	</style>
+	<script src="jquery.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript" src="jFitImage.js"></script>
+	<script type="text/javascript" charset="utf-8">		
+		$(function() {
+			$(".fit").jFitImage({
+				width: 350,
+				height: 250,
+				isNotOverFit: true,
+				callback: function(element, isNotOverImage) {
+				}
+			});
+		});
+	</script>
+</head>
+<body>
+	<h1>350 × 250でフィットさせる</h1>
+
+	<div class="clearfix">
+		<h2>100 × 200</h2>
+		<p><img class="fit" src="loading.jpg" data-src="100_200.jpg"></p>
+	</div>
+
+	<div class="clearfix">
+		<h2>200 × 500</h2>
+		<p><img class="fit" src="loading.jpg" data-src="200_500.jpg"></p>
+	</div>
+
+	<div class="clearfix">
+		<h2>370 × 264</h2>
+		<p><img class="fit" src="loading.jpg" data-src="370_264.jpg"></p>
+	</div>
+
+	<div class="clearfix">
+		<h2>480 × 360</h2>
+		<p><img class="fit" src="loading.jpg" data-src="103org.jpeg"></p>
+	</div>
+</body>
+</html>
