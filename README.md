@@ -1,0 +1,1 @@
+## 使い方    $(".fit").jFitImage({      width: 350,      height: 250,      isNotOverFit: true,      callback: function(element, isNotOverImage) {      }    });
